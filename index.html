@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoSales - Car Dealership</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        nav a {
+            color: white;
+            margin-left: 2rem;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: #ff6b6b;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background: #ee5a52;
+        }
+
+        .cars-section {
+            padding: 4rem 0;
+        }
+
+        .cars-section h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+
+        .cars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .car-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            background: white;
+        }
+
+        .car-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .car-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+
+        .car-info {
+            padding: 1.5rem;
+        }
+
+        .car-info h3 {
+            margin-bottom: 0.5rem;
+            color: #667eea;
+        }
+
+        .car-info p {
+            color: #666;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .price {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #ff6b6b;
+            margin: 1rem 0;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+
+            .cars-grid {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            nav a {
+                margin-left: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🚗 AutoSales</h1>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#cars">Our Cars</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <h2>Find Your Perfect Car</h2>
+            <p>Best deals on quality used and new vehicles</p>
+            <button class="btn">Browse Cars</button>
+        </div>
+    </section>
+
+    <section class="cars-section" id="cars">
+        <div class="container">
+            <h2>Featured Vehicles</h2>
+            <div class="cars-grid">
+                <div class="car-card">
+                    <div class="car-image">🏎️</div>
+                    <div class="car-info">
+                        <h3>Tesla Model 3</h3>
+                        <p><strong>Year:</strong> 2024</p>
+                        <p><strong>Mileage:</strong> 5,000 miles</p>
+                        <p><strong>Condition:</strong> Excellent</p>
+                        <div class="price">$42,999</div>
+                        <button class="btn">View Details</button>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <div class="car-image">🚙</div>
+                    <div class="car-info">
+                        <h3>Honda Civic</h3>
+                        <p><strong>Year:</strong> 2023</p>
+                        <p><strong>Mileage:</strong> 15,000 miles</p>
+                        <p><strong>Condition:</strong> Like New</p>
+                        <div class="price">$24,999</div>
+                        <button class="btn">View Details</button>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <div class="car-image">🚗</div>
+                    <div class="car-info">
+                        <h3>BMW X5</h3>
+                        <p><strong>Year:</strong> 2023</p>
+                        <p><strong>Mileage:</strong> 20,000 miles</p>
+                        <p><strong>Condition:</strong> Perfect</p>
+                        <div class="price">$58,999</div>
+                        <button class="btn">View Details</button>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <div class="car-image">🚐</div>
+                    <div class="car-info">
+                        <h3>Toyota Camry</h3>
+                        <p><strong>Year:</strong> 2022</p>
+                        <p><strong>Mileage:</strong> 35,000 miles</p>
+                        <p><strong>Condition:</strong> Excellent</p>
+                        <div class="price">$26,999</div>
+                        <button class="btn">View Details</button>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <div class="car-image">🏁</div>
+                    <div class="car-info">
+                        <h3>Ford Mustang</h3>
+                        <p><strong>Year:</strong> 2023</p>
+                        <p><strong>Mileage:</strong> 12,000 miles</p>
+                        <p><strong>Condition:</strong> Like New</p>
+                        <div class="price">$35,999</div>
+                        <button class="btn">View Details</button>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <div class="car-image">🚘</div>
+                    <div class="car-info">
+                        <h3>Audi A4</h3>
+                        <p><strong>Year:</strong> 2022</p>
+                        <p><strong>Mileage:</strong> 28,000 miles</p>
+                        <p><strong>Condition:</strong> Excellent</p>
+                        <div class="price">$38,999</div>
+                        <button class="btn">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <p>&copy; 2024 AutoSales. All rights reserved.</p>
+            <p>Email: info@autosales.com | Phone: 1-800-CARS-NOW</p>
+        </div>
+    </footer>
+</body>
+</html>

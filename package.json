@@ -1,0 +1,21 @@
+{
+  "name": "autosales-website",
+  "version": "1.0.0",
+  "description": "Simple car sales website with Node.js and Docker",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"No tests configured\""
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "mongoose": "^8.13.2"
+  },
+  "keywords": [
+    "car-sales",
+    "nodejs",
+    "docker"
+  ],
+  "author": "",
+  "license": "MIT"
+}
